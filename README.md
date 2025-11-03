@@ -20,11 +20,11 @@ Este projeto é o meu portfólio online, onde demonstro o meu trabalho e paixão
 
 Este site foi construído utilizando as seguintes tecnologias e ferramentas:
 
-* **Frontend:**
+* **Front-end:**
     * HTML5
     * CSS3
     * Bootstrap
-* **Backend:**
+* **Back-end:**
     * JavaScript
 * **Ferramentas de Desenvolvimento:**
     * Git & GitHub
