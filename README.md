@@ -24,6 +24,7 @@ Este site foi construído utilizando as seguintes tecnologias e ferramentas:
     * HTML5
     * CSS3
     * Bootstrap
+    * Tailwind CSS
 * **Back-end:**
     * JavaScript
 * **Ferramentas de Desenvolvimento:**
