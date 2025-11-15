@@ -17,17 +17,23 @@
             padding-left: 256px;
         }
 
+        @media (max-width: 768px) {
+            body {
+                padding-left: 0;
+            }
+        }
+
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fundo.jpg');
             background-size: cover;
             background-position: center;
         }
 
-        .bg-primary-red {
+        .bg-primary-purple {
             background-color: #000000;
         }
 
-        .hover\:bg-primary-red-dark:hover {
+        .hover\:bg-primary-purple-dark:hover {
             background-color: #a83939;
         }
 
@@ -39,7 +45,7 @@
             color: #a83939;
         }
 
-        .hover\:text-secondary-red:hover {
+        .hover\:text-secondary-purple:hover {
             color: #a83939;
         }
 
@@ -125,8 +131,13 @@
 
 <body class="bg-gray-100 text-dark-text">
 
+    <button id="mobile-menu-btn"
+        class="md:hidden fixed top-4 left-4 z-50 bg-primary-purple text-white p-2 rounded-lg shadow-lg">
+        ☰
+    </button>
+
     <aside
-        class="fixed left-0 top-0 h-full w-64 bg-primary-red text-white p-6 shadow-lg flex flex-col justify-between">
+        class="fixed left-0 top-0 h-full w-64 bg-primary-purple text-white p-6 shadow-lg flex flex-col justify-between transform -translate-x-full md:translate-x-0 transition-transform duration-300">
         <div>
             <div class="text-center mb-8">
                 <img src="profile.jpg" alt="foto"
@@ -181,14 +192,15 @@
                 <h1 class="text-4xl font-bold text-center mb-12">Sobre</h1>
                 <div class="flex flex-col items-center justify-center text-center">
                     <div class="md:w-1/2 mb-8 md:mb-0">
-                        <h3 class="text-3xl font-semibold mb-4">Olá! Eu sou <span class="text-primary-red">Yan Kenny</span></h3>
+                        <h3 class="text-3xl font-semibold mb-4">Olá! Eu sou <span class="text-primary-red">Yan
+                                Kenny</span></h3>
                         <p class="text-gray-700 leading-relaxed mb-6">
                             Sou um desenvolvedor de Software que gosta de construir experiências digitais incríveis.
                             Com um forte foco em design e funcionalidade, busco sempre as melhores soluções para cada
                             projeto.
                         </p>
                         <button
-                            class="bg-primary-red hover:bg-primary-red-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Baixar
+                            class="bg-primary-purple hover:bg-primary-purple-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Baixar
                             CV</button>
                     </div>
                 </div>
@@ -211,7 +223,8 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Desenvolvimento de Apps</h3>
-                        <p class="text-gray-600">Crio aplicações utilizando a linguagem Java, nativos e híbridos para diversas plataformas.</p>
+                        <p class="text-gray-600">Crio aplicações utilizando a linguagem Java, nativos e híbridos para
+                            diversas plataformas.</p>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
                         <div class="text-primary-red text-5xl mb-4">
@@ -223,7 +236,8 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Desenvolvimento Web</h3>
-                        <p class="text-gray-600">Crio sites responsivos e de alto desempenho usando as tecnologias mais recentes.</p>
+                        <p class="text-gray-600">Crio sites responsivos e de alto desempenho usando as tecnologias mais
+                            recentes.</p>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
                         <div class="text-primary-red text-5xl mb-4">
@@ -235,7 +249,8 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Design UI/UX</h3>
-                        <p class="text-gray-600">Desenho interfaces de usuário intuitivas e experiências de usuário agradáveis.
+                        <p class="text-gray-600">Desenho interfaces de usuário intuitivas e experiências de usuário
+                            agradáveis.
                         </p>
                     </div>
                 </div>
@@ -253,13 +268,14 @@
                         <div class="space-y-8">
                             <div class="bg-gray-background p-6 rounded-lg shadow-sm">
                                 <span
-                                    class="bg-light-red text-primary-red-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025
+                                    class="bg-light-red text-primary-purple-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025
                                     - Presente</span>
                                 <h4 class="text-xl font-semibold mb-1">Técnologo em Análise e Desenvolvimento de
                                     Sistemas</h4>
                                 <p class="text-gray-600 mb-2">UNINASSAU</p>
                                 <p class="text-gray-700">Atualmente estou desenvolvendo sólidas competências em
-                                    programação back-end, modelagem e gestão de bancos de dados, e engenharia de software. Também
+                                    programação back-end, modelagem e gestão de bancos de dados, e engenharia de
+                                    software. Também
                                     estou me aprofundando em metodologias ágeis como Scrum. Meu foco está na resolução
                                     prática de problemas e na criação de sistemas eficientes que atendam às necessidades
                                     do mercado.</p>
@@ -271,21 +287,26 @@
                         <div class="space-y-8">
                             <div class="bg-gray-background p-6 rounded-lg shadow-sm">
                                 <span
-                                    class="bg-light-red text-primary-red-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
+                                    class="bg-light-red text-primary-purple-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
                                 <h4 class="text-xl font-semibold mb-1">Java Development</h4>
                                 <p class="text-gray-600 mb-2"> FIAP </p>
-                                <p class="text-gray-700">• Aprendi conceitos de classes, objetos, herança, polimorfismo, encapsulamento e interfaces.</p>
+                                <p class="text-gray-700">• Aprendi conceitos de classes, objetos, herança, polimorfismo,
+                                    encapsulamento e interfaces.</p>
                                 <p class="text-gray-700">• Aplicação prática em projetos Java reais.</p>
                             </div>
                             <div class="bg-gray-background p-6 rounded-lg shadow-sm">
                                 <span
-                                    class="bg-light-red text-primary-red-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
+                                    class="bg-light-red text-primary-purple-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
                                 <h4 class="text-xl font-semibold mb-1">Scrum Fundamentals Certified</h4>
                                 <p class="text-gray-600 mb-2"> VMEdu Inc. </p>
-                                <p class="text-gray-700">• Entendimento dos papéis de Scrum Master, Product Owner e Time de Desenvolvimento. </p>
-                                <p class="text-gray-700">• Estudo dos principais artefatos: Product Backlog, Sprint Backlog e Increment.</p>
-                                <p class="text-gray-700">• Entendi como aplicar o Scrum em diferentes contextos organizacionais</p>
-                                <p class="text-gray-700">• Entendi como desenvolver boas práticas de colaboração, priorização e entrega contínua.</p>
+                                <p class="text-gray-700">• Entendimento dos papéis de Scrum Master, Product Owner e Time
+                                    de Desenvolvimento. </p>
+                                <p class="text-gray-700">• Estudo dos principais artefatos: Product Backlog, Sprint
+                                    Backlog e Increment.</p>
+                                <p class="text-gray-700">• Entendi como aplicar o Scrum em diferentes contextos
+                                    organizacionais</p>
+                                <p class="text-gray-700">• Entendi como desenvolver boas práticas de colaboração,
+                                    priorização e entrega contínua.</p>
                             </div>
                         </div>
                     </div>
@@ -299,7 +320,7 @@
                                 <span>95%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-red h-2.5 rounded-full" style="width: 95%"></div>
+                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 95%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -308,7 +329,7 @@
                                 <span>90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-red h-2.5 rounded-full" style="width: 90%"></div>
+                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -317,7 +338,7 @@
                                 <span>90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-red h-2.5 rounded-full" style="width: 90%"></div>
+                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -326,7 +347,7 @@
                                 <span>80%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-red h-2.5 rounded-full" style="width: 80%"></div>
+                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -335,7 +356,7 @@
                                 <span>50%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-red h-2.5 rounded-full" style="width: 50%"></div>
+                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 50%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -344,7 +365,7 @@
                                 <span>50%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-red h-2.5 rounded-full" style="width: 50%"></div>
+                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 50%"></div>
                             </div>
                         </div>
                     </div>
@@ -354,8 +375,8 @@
 
         <section id="contact" class="py-16 bg-gray-100">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">Entre em <span
-                        class="text-primary-red">contato</span></h2>
+                <h2 class="text-4xl font-bold text-center mb-12">Entre em <span class="text-primary-red">contato</span>
+                </h2>
                 <div class="flex flex-col md:flex-row md:space-x-12">
                     <div class="md:w-2/3 bg-white p-8 rounded-lg shadow-md mb-8 md:mb-0">
                         <h3 class="text-2xl font-semibold mb-6">Envie uma mensagem</h3>
@@ -387,7 +408,7 @@
                                     placeholder="Sua Mensagem"></textarea>
                             </div>
                             <button type="submit"
-                                class="bg-primary-red hover:bg-primary-red-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Enviar
+                                class="bg-primary-purple hover:bg-primary-purple-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Enviar
                                 Mensagem</button>
                         </form>
                     </div>
@@ -417,12 +438,12 @@
                                             d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.57.12.35.03.75-.24 1.02l-2.2 2.2z">
                                         </path>
                                     </svg>
-                                </span>+55 83 99638-6296</p>
+                                </span>+55 83 99984-3313</p>
                         </div>
                         <h4 class="text-xl font-semibold mt-8 mb-4">Siga-me</h4>
                         <div class="flex space-x-4">
-                            <a href="https://www.linkedin.com/in/yan-kenny" target="_blank"
-                                rel="noopener noreferrer" class="transition duration-300" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/yan-kenny" target="_blank" rel="noopener noreferrer"
+                                class="transition duration-300" aria-label="LinkedIn">
                                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#a83939"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -452,7 +473,7 @@
         </section>
     </main>
 
-    <footer class="bg-primary-red text-white py-8">
+    <footer class="bg-primary-purple text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; <span id="current-year"></span> Yan Kenny. Todos os direitos reservados.</p>
         </div>
@@ -468,8 +489,11 @@
                 });
             });
         });
+        
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.querySelector('aside').classList.toggle('-translate-x-full');
+        });
     </script>
 </body>
-
 
 </html>
