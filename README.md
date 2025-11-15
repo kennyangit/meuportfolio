@@ -35,6 +35,7 @@ Este site foi construído utilizando as seguintes tecnologias e ferramentas:
     * GitHub Pages
 
 ## ✨ Funcionalidades Principais
+* Site totalmente responsivo
 * Navegação fixa e suave.
 * Seções de informação detalhadas.
 * Formulário de contato funcional.
