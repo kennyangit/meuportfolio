@@ -5,121 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yan - Portfólio</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Lato:400,700&display=swap"    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Lato:400,700&display=swap"
         rel="stylesheet">
     <style>
         body {
-            font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
             /* Define a família da fonte padrão*/
-            background-color: #F3F4F6;
+            font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
             /* Cor de fundo principal*/
-            color: #3E3142;
+            background-color: #F3F4F6;
             /* Cor de texto padrão*/
-            padding-left: 256px;
+            color: #3E3142;
             /* Adiciona padding à esquerda para compensar a barra lateral fixa (w-64 = 256px) */
+            padding-left: 256px;
         }
 
+        /* Media Query: Estilos aplicados em telas de até 768px (móvel/tablet) */
         @media (max-width: 768px) {
-
-            /* Media Query: Estilos aplicados em telas de até 768px (móvel/tablet) */
             body {
                 padding-left: 0;
-                /* Remove o padding esquerdo em telas pequenas (a barra lateral é oculta/sobreposta) */
             }
         }
 
+        /* Estilo para o fundo da seção "Início" */
         .hero-bg {
-            /* Estilo para o fundo da seção "Início" */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fundo.jpg');
             /* Aplica um gradiente preto semi-transparente sobre a imagem 'fundo.jpg' */
-            background-size: cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fundo.jpg');
             /* Garante que a imagem cubra toda a área */
-            background-position: center;
+            background-size: cover;
             /* Centraliza a imagem de fundo */
+            background-position: center;
         }
 
+        /* Define a cor de fundo para a classe customizada 'primary-dark' (preto) */
         .bg-primary-dark {
-            /* Define a cor de fundo para a classe customizada 'primary-dark' (preto) */
             background-color: #000000;
         }
 
+        /* Define a cor de fundo no hover para a classe customizada 'primary-red-dark' (vermelho escuro) */
         .hover\:bg-primary-red-dark:hover {
-            /* Define a cor de fundo no hover para a classe customizada 'primary-red-dark' (vermelho escuro) */
             background-color: #a83939;
         }
 
+        /* Define a cor de texto para a classe customizada 'primary-red' (vermelho escuro) */
         .text-primary-red {
-            /* Define a cor de texto para a classe customizada 'primary-red' (vermelho escuro) */
             color: #a83939;
         }
 
+        /* Define a cor de texto no hover para a classe customizada 'primary-red' */
         .hover\:text-primary-red:hover {
-            /* Define a cor de texto no hover para a classe customizada 'primary-red' */
             color: #a83939;
         }
 
+        /* Define a cor de texto no hover para a classe customizada 'secondary-red' (com o mesmo valor do primary-red) */
         .hover\:text-secondary-red:hover {
-            /* Define a cor de texto no hover para a classe customizada 'secondary-red' (com o mesmo valor do primary-red) */
             color: #a83939;
         }
 
+        /* Define a cor de fundo para a classe customizada 'light-red' (vermelho claro) */
         .bg-light-red {
-            /* Define a cor de fundo para a classe customizada 'light-red' (vermelho claro) */
             background-color: #f0d4d4;
         }
 
+        /* Define a cor de texto para a classe customizada 'dark-text' (cinza escuro) */
         .text-dark-text {
-            /* Define a cor de texto para a classe customizada 'dark-text' (cinza escuro) */
             color: #3E3142;
         }
 
+        /* Define a cor de fundo para a classe customizada 'dark-bg' (vermelho escuro) */
         .bg-dark-bg {
-            /* Define a cor de fundo para a classe customizada 'dark-bg' (vermelho escuro) */
             background-color: #a83939;
         }
 
+        /* Define a cor de texto para a classe customizada 'black-text' (preto) */
         .text-black-text {
-            /* Define a cor de texto para a classe customizada 'black-text' (preto) */
             color: #000000;
         }
 
+        /* Define a cor de fundo para a classe customizada 'gray-background' (cinza quase branco) */
         .bg-gray-background {
-            /* Define a cor de fundo para a classe customizada 'gray-background' (cinza quase branco) */
             background-color: #F9FAFB;
         }
 
+        /* Define a cor da borda para a classe customizada 'primary-red' (vermelho escuro) */
         .border-primary-red {
-            /* Define a cor da borda para a classe customizada 'primary-red' (vermelho escuro) */
             border-color: #a83939;
         }
 
+        /* Garante que a classe md:hidden (ocultar em telas maiores) funcione corretamente */
         .md\:hidden {
-            /* Garante que a classe md:hidden (ocultar em telas maiores) funcione corretamente */
             display: none;
         }
 
+        /* Estilos básicos para campos de formulário */
         input,
         textarea {
-            /* Estilos básicos para campos de formulário */
             background-color: #fff;
             color: #3E3142;
             border-color: #ce0c0c80;
             font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
         }
 
+        /* Estilos aplicados quando o campo está focado */
         input:focus,
         textarea:focus {
-            /* Estilos aplicados quando o campo está focado */
-            outline: none;
             /* Remove o outline padrão */
-            border-color: #ce0c0c80;
+            outline: none;
             /* Cor da borda no foco */
+            border-color: #ce0c0c80;
+            /*Sombra de foco*/
             box-shadow: 0 0 0 2px #8B39A833;
-            /* Sombra/anel de foco */
         }
 
-        /* Redefinição/Reforço de classes Tailwind com !important */
+        /* Reforço de classes Tailwind com !important */
         .bg-white {
             background-color: #fff !important;
         }
@@ -144,11 +143,11 @@
             background-color: #E5E7EB !important;
         }
 
+        /* Redefine as sombras para usar uma cor vermelha/roxa semi-transparente */
         .shadow-md,
         .shadow-lg,
         .shadow-sm,
         .hover\:shadow-xl:hover {
-            /* Redefine as sombras para usar uma cor vermelha/roxa semi-transparente */
             box-shadow: 0 2px 16px 0 #ce0c0c80 !important;
         }
 
@@ -509,29 +508,29 @@
         </div>
     </footer>
     <script>
-        /* Início do Script JavaScript para interatividade */
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        // Preenche o span com id 'current-year' no rodapé com o ano atual dinamicamente.
 
+        // Preenche o span com id 'current-year' no rodapé com o ano atual dinamicamente.
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Seleciona todos os links que apontam para âncoras internas (href="#secao")
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            // Seleciona todos os links que apontam para âncoras internas (href="#secao")
+
+            // Adiciona um ouvinte de evento de clique
             anchor.addEventListener('click', function (e) {
-                // Adiciona um ouvinte de evento de clique
+                // Previne o comportamento padrão do link
                 e.preventDefault();
-                // Previne o comportamento padrão do link (salto abrupto)
+                // Rola a tela até o elemento correspondente ao href e define a rolagem como suave (smooth scroll)
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    // Rola a tela até o elemento correspondente ao href (id da seção)
                     behavior: 'smooth'
-                    // Define a rolagem como suave (smooth scroll)
                 });
             });
         });
 
+        // Adiciona um evento de clique ao botão do menu móvel
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            // Adiciona um ouvinte de evento de clique ao botão do menu móvel
-            document.querySelector('aside').classList.toggle('-translate-x-full');
             // Alterna a classe Tailwind '-translate-x-full' na tag 'aside' (barra lateral),
             // mostrando ou ocultando o menu móvel.
+            document.querySelector('aside').classList.toggle('-translate-x-full');
         });
     </script>
 </body>
