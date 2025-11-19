@@ -6,79 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yan - Portfólio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Open Sans, Roboto, Lato -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Lato:400,700&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Lato:400,700&display=swap"    
         rel="stylesheet">
     <style>
         body {
             font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
+            /* Define a família da fonte padrão*/
             background-color: #F3F4F6;
+            /* Cor de fundo principal*/
             color: #3E3142;
+            /* Cor de texto padrão*/
             padding-left: 256px;
+            /* Adiciona padding à esquerda para compensar a barra lateral fixa (w-64 = 256px) */
         }
 
         @media (max-width: 768px) {
+
+            /* Media Query: Estilos aplicados em telas de até 768px (móvel/tablet) */
             body {
                 padding-left: 0;
+                /* Remove o padding esquerdo em telas pequenas (a barra lateral é oculta/sobreposta) */
             }
         }
 
         .hero-bg {
+            /* Estilo para o fundo da seção "Início" */
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fundo.jpg');
+            /* Aplica um gradiente preto semi-transparente sobre a imagem 'fundo.jpg' */
             background-size: cover;
+            /* Garante que a imagem cubra toda a área */
             background-position: center;
+            /* Centraliza a imagem de fundo */
         }
 
-        .bg-primary-purple {
+        .bg-primary-dark {
+            /* Define a cor de fundo para a classe customizada 'primary-dark' (preto) */
             background-color: #000000;
         }
 
-        .hover\:bg-primary-purple-dark:hover {
+        .hover\:bg-primary-red-dark:hover {
+            /* Define a cor de fundo no hover para a classe customizada 'primary-red-dark' (vermelho escuro) */
             background-color: #a83939;
         }
 
         .text-primary-red {
+            /* Define a cor de texto para a classe customizada 'primary-red' (vermelho escuro) */
             color: #a83939;
         }
 
         .hover\:text-primary-red:hover {
+            /* Define a cor de texto no hover para a classe customizada 'primary-red' */
             color: #a83939;
         }
 
-        .hover\:text-secondary-purple:hover {
+        .hover\:text-secondary-red:hover {
+            /* Define a cor de texto no hover para a classe customizada 'secondary-red' (com o mesmo valor do primary-red) */
             color: #a83939;
         }
 
         .bg-light-red {
+            /* Define a cor de fundo para a classe customizada 'light-red' (vermelho claro) */
             background-color: #f0d4d4;
         }
 
         .text-dark-text {
+            /* Define a cor de texto para a classe customizada 'dark-text' (cinza escuro) */
             color: #3E3142;
         }
 
         .bg-dark-bg {
+            /* Define a cor de fundo para a classe customizada 'dark-bg' (vermelho escuro) */
             background-color: #a83939;
         }
 
         .text-black-text {
+            /* Define a cor de texto para a classe customizada 'black-text' (preto) */
             color: #000000;
         }
 
         .bg-gray-background {
+            /* Define a cor de fundo para a classe customizada 'gray-background' (cinza quase branco) */
             background-color: #F9FAFB;
         }
 
         .border-primary-red {
+            /* Define a cor da borda para a classe customizada 'primary-red' (vermelho escuro) */
             border-color: #a83939;
         }
 
         .md\:hidden {
+            /* Garante que a classe md:hidden (ocultar em telas maiores) funcione corretamente */
             display: none;
         }
 
         input,
         textarea {
+            /* Estilos básicos para campos de formulário */
             background-color: #fff;
             color: #3E3142;
             border-color: #ce0c0c80;
@@ -87,11 +110,16 @@
 
         input:focus,
         textarea:focus {
+            /* Estilos aplicados quando o campo está focado */
             outline: none;
+            /* Remove o outline padrão */
             border-color: #ce0c0c80;
+            /* Cor da borda no foco */
             box-shadow: 0 0 0 2px #8B39A833;
+            /* Sombra/anel de foco */
         }
 
+        /* Redefinição/Reforço de classes Tailwind com !important */
         .bg-white {
             background-color: #fff !important;
         }
@@ -120,10 +148,12 @@
         .shadow-lg,
         .shadow-sm,
         .hover\:shadow-xl:hover {
+            /* Redefine as sombras para usar uma cor vermelha/roxa semi-transparente */
             box-shadow: 0 2px 16px 0 #ce0c0c80 !important;
         }
 
         .border-white {
+            /* Redefine a cor da borda branca para quase preto */
             border-color: #0f0f0f !important;
         }
     </style>
@@ -132,12 +162,12 @@
 <body class="bg-gray-100 text-dark-text">
 
     <button id="mobile-menu-btn"
-        class="md:hidden fixed top-4 left-4 z-50 bg-primary-purple text-white p-2 rounded-lg shadow-lg">
+        class="md:hidden fixed top-4 left-4 z-50 bg-primary-dark text-white p-2 rounded-lg shadow-lg">
         ☰
     </button>
 
     <aside
-        class="fixed left-0 top-0 h-full w-64 bg-primary-purple text-white p-6 shadow-lg flex flex-col justify-between transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+        class="fixed left-0 top-0 h-full w-64 bg-primary-dark text-white p-6 shadow-lg flex flex-col justify-between transform -translate-x-full md:translate-x-0 transition-transform duration-300">
         <div>
             <div class="text-center mb-8">
                 <img src="perfil.jpg" alt="foto"
@@ -200,7 +230,7 @@
                             projeto.
                         </p>
                         <button
-                            class="bg-primary-purple hover:bg-primary-purple-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Baixar
+                            class="bg-primary-dark hover:bg-primary-red-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Baixar
                             CV</button>
                     </div>
                 </div>
@@ -268,7 +298,7 @@
                         <div class="space-y-8">
                             <div class="bg-gray-background p-6 rounded-lg shadow-sm">
                                 <span
-                                    class="bg-light-red text-primary-purple-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025
+                                    class="bg-light-red text-primary-red-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025
                                     - Presente</span>
                                 <h4 class="text-xl font-semibold mb-1">Técnologo em Análise e Desenvolvimento de
                                     Sistemas</h4>
@@ -287,7 +317,7 @@
                         <div class="space-y-8">
                             <div class="bg-gray-background p-6 rounded-lg shadow-sm">
                                 <span
-                                    class="bg-light-red text-primary-purple-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
+                                    class="bg-light-red text-primary-red-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
                                 <h4 class="text-xl font-semibold mb-1">Java Development</h4>
                                 <p class="text-gray-600 mb-2"> FIAP </p>
                                 <p class="text-gray-700">• Aprendi conceitos de classes, objetos, herança, polimorfismo,
@@ -296,7 +326,7 @@
                             </div>
                             <div class="bg-gray-background p-6 rounded-lg shadow-sm">
                                 <span
-                                    class="bg-light-red text-primary-purple-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
+                                    class="bg-light-red text-primary-red-dark text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 inline-block">2025</span>
                                 <h4 class="text-xl font-semibold mb-1">Scrum Fundamentals Certified</h4>
                                 <p class="text-gray-600 mb-2"> VMEdu Inc. </p>
                                 <p class="text-gray-700">• Entendimento dos papéis de Scrum Master, Product Owner e Time
@@ -320,7 +350,7 @@
                                 <span>95%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 95%"></div>
+                                <div class="bg-primary-dark h-2.5 rounded-full" style="width: 95%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -329,7 +359,7 @@
                                 <span>90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 90%"></div>
+                                <div class="bg-primary-dark h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -338,7 +368,7 @@
                                 <span>90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 90%"></div>
+                                <div class="bg-primary-dark h-2.5 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -347,7 +377,7 @@
                                 <span>80%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 80%"></div>
+                                <div class="bg-primary-dark h-2.5 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -356,7 +386,7 @@
                                 <span>50%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 50%"></div>
+                                <div class="bg-primary-dark h-2.5 rounded-full" style="width: 50%"></div>
                             </div>
                         </div>
                         <div class="bg-gray-background p-6 rounded-lg shadow-sm">
@@ -365,7 +395,7 @@
                                 <span>50%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="bg-primary-purple h-2.5 rounded-full" style="width: 50%"></div>
+                                <div class="bg-primary-dark h-2.5 rounded-full" style="width: 50%"></div>
                             </div>
                         </div>
                     </div>
@@ -408,7 +438,7 @@
                                     placeholder="Sua Mensagem"></textarea>
                             </div>
                             <button type="submit"
-                                class="bg-primary-purple hover:bg-primary-purple-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Enviar
+                                class="bg-primary-dark hover:bg-primary-red-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Enviar
                                 Mensagem</button>
                         </form>
                     </div>
@@ -473,25 +503,35 @@
         </section>
     </main>
 
-    <footer class="bg-primary-purple text-white py-8">
+    <footer class="bg-primary-dark text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; <span id="current-year"></span> Yan Kenny. Todos os direitos reservados.</p>
         </div>
     </footer>
     <script>
+        /* Início do Script JavaScript para interatividade */
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Preenche o span com id 'current-year' no rodapé com o ano atual dinamicamente.
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            // Seleciona todos os links que apontam para âncoras internas (href="#secao")
             anchor.addEventListener('click', function (e) {
+                // Adiciona um ouvinte de evento de clique
                 e.preventDefault();
+                // Previne o comportamento padrão do link (salto abrupto)
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    // Rola a tela até o elemento correspondente ao href (id da seção)
                     behavior: 'smooth'
+                    // Define a rolagem como suave (smooth scroll)
                 });
             });
         });
-        
+
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            // Adiciona um ouvinte de evento de clique ao botão do menu móvel
             document.querySelector('aside').classList.toggle('-translate-x-full');
+            // Alterna a classe Tailwind '-translate-x-full' na tag 'aside' (barra lateral),
+            // mostrando ou ocultando o menu móvel.
         });
     </script>
 </body>
