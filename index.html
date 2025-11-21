@@ -9,159 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Lato:400,700&display=swap"
         rel="stylesheet">
-    <style>
-        body {
-            /* Define a família da fonte padrão*/
-            font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
-            /* Cor de fundo principal*/
-            background-color: #F3F4F6;
-            /* Cor de texto padrão*/
-            color: #3E3142;
-            /* Adiciona padding à esquerda para compensar a barra lateral fixa (w-64 = 256px) */
-            padding-left: 256px;
-        }
-
-        /* Media Query: Estilos aplicados em telas de até 768px (móvel/tablet) */
-        @media (max-width: 768px) {
-            body {
-                padding-left: 0;
-            }
-        }
-
-        /* Estilo para o fundo da seção "Início" */
-        .hero-bg {
-            /* Aplica um gradiente preto semi-transparente sobre a imagem 'fundo.jpg' */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fundo.jpg');
-            /* Garante que a imagem cubra toda a área */
-            background-size: cover;
-            /* Centraliza a imagem de fundo */
-            background-position: center;
-        }
-
-        /* Define a cor de fundo para a classe customizada 'primary-dark' (preto) */
-        .bg-primary-dark {
-            background-color: #000000;
-        }
-
-        /* Define a cor de fundo no hover para a classe customizada 'primary-red-dark' (vermelho escuro) */
-        .hover\:bg-primary-red-dark:hover {
-            background-color: #a83939;
-        }
-
-        /* Define a cor de texto para a classe customizada 'primary-red' (vermelho escuro) */
-        .text-primary-red {
-            color: #a83939;
-        }
-
-        /* Define a cor de texto no hover para a classe customizada 'primary-red' */
-        .hover\:text-primary-red:hover {
-            color: #a83939;
-        }
-
-        /* Define a cor de texto no hover para a classe customizada 'secondary-red' (com o mesmo valor do primary-red) */
-        .hover\:text-secondary-red:hover {
-            color: #a83939;
-        }
-
-        /* Define a cor de fundo para a classe customizada 'light-red' (vermelho claro) */
-        .bg-light-red {
-            background-color: #f0d4d4;
-        }
-
-        /* Define a cor de texto para a classe customizada 'dark-text' (cinza escuro) */
-        .text-dark-text {
-            color: #3E3142;
-        }
-
-        /* Define a cor de fundo para a classe customizada 'dark-bg' (vermelho escuro) */
-        .bg-dark-bg {
-            background-color: #a83939;
-        }
-
-        /* Define a cor de texto para a classe customizada 'black-text' (preto) */
-        .text-black-text {
-            color: #000000;
-        }
-
-        /* Define a cor de fundo para a classe customizada 'gray-background' (cinza quase branco) */
-        .bg-gray-background {
-            background-color: #F9FAFB;
-        }
-
-        /* Define a cor da borda para a classe customizada 'primary-red' (vermelho escuro) */
-        .border-primary-red {
-            border-color: #a83939;
-        }
-
-        /* Garante que a classe md:hidden (ocultar em telas maiores) funcione corretamente */
-        .md\:hidden {
-            display: none;
-        }
-
-        /* Estilos básicos para campos de formulário */
-        input,
-        textarea {
-            background-color: #fff;
-            color: #3E3142;
-            border-color: #ce0c0c80;
-            font-family: 'Open Sans', 'Roboto', 'Lato', Arial, sans-serif;
-        }
-
-        /* Estilos aplicados quando o campo está focado */
-        input:focus,
-        textarea:focus {
-            /* Remove o outline padrão */
-            outline: none;
-            /* Cor da borda no foco */
-            border-color: #ce0c0c80;
-            /*Sombra de foco*/
-            box-shadow: 0 0 0 2px #8B39A833;
-        }
-
-        /* Reforço de classes Tailwind com !important */
-        .bg-white {
-            background-color: #fff !important;
-        }
-
-        .text-gray-700 {
-            color: #3E3142 !important;
-        }
-
-        .text-gray-600 {
-            color: #6B7280 !important;
-        }
-
-        .text-gray-300 {
-            color: #D1D5DB !important;
-        }
-
-        .bg-gray-100 {
-            background-color: #F3F4F6 !important;
-        }
-
-        .bg-gray-200 {
-            background-color: #E5E7EB !important;
-        }
-
-        /* Redefine as sombras para usar uma cor vermelha/roxa semi-transparente */
-        .shadow-md,
-        .shadow-lg,
-        .shadow-sm,
-        .hover\:shadow-xl:hover {
-            box-shadow: 0 2px 16px 0 #ce0c0c80 !important;
-        }
-
-        .border-white {
-            /* Redefine a cor da borda branca para quase preto */
-            border-color: #0f0f0f !important;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-100 text-dark-text">
 
     <button id="mobile-menu-btn"
-        class="md:hidden fixed top-4 left-4 z-50 bg-primary-dark text-white p-2 rounded-lg shadow-lg">
+        class="md:hidden fixed top-4 left-4 z-50 bg-gray-900 text-white p-2 rounded-lg shadow-lg">
         ☰
     </button>
 
@@ -169,7 +23,7 @@
         class="fixed left-0 top-0 h-full w-64 bg-primary-dark text-white p-6 shadow-lg flex flex-col justify-between transform -translate-x-full md:translate-x-0 transition-transform duration-300">
         <div>
             <div class="text-center mb-8">
-                <img src="perfil.jpg" alt="foto"
+                <img src="images/perfil.jpg" alt="foto"
                     class="rounded-full mx-auto mb-4 w-24 h-24 object-cover border-4 border-white aspect-square">
                 <h2 class="text-2xl font-bold text-white">Yan Kenny</h2>
             </div>
@@ -228,9 +82,12 @@
                             Com um forte foco em design e funcionalidade, busco sempre as melhores soluções para cada
                             projeto.
                         </p>
-                        <button
-                            class="bg-primary-dark hover:bg-primary-red-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Baixar
-                            CV</button>
+                        <a href="docs/curriculo_yankenny.pdf" download>
+                            <button
+                                class="bg-primary-dark hover:bg-primary-red-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Baixar
+                                Currículo
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -436,6 +293,7 @@
                                     class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-red"
                                     placeholder="Sua Mensagem"></textarea>
                             </div>
+                            
                             <button type="submit"
                                 class="bg-primary-dark hover:bg-primary-red-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">Enviar
                                 Mensagem</button>
@@ -507,32 +365,7 @@
             <p>&copy; <span id="current-year"></span> Yan Kenny. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script>
-
-        // Preenche o span com id 'current-year' no rodapé com o ano atual dinamicamente.
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Seleciona todos os links que apontam para âncoras internas (href="#secao")
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-            // Adiciona um ouvinte de evento de clique
-            anchor.addEventListener('click', function (e) {
-                // Previne o comportamento padrão do link
-                e.preventDefault();
-                // Rola a tela até o elemento correspondente ao href e define a rolagem como suave (smooth scroll)
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Adiciona um evento de clique ao botão do menu móvel
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            // Alterna a classe Tailwind '-translate-x-full' na tag 'aside' (barra lateral),
-            // mostrando ou ocultando o menu móvel.
-            document.querySelector('aside').classList.toggle('-translate-x-full');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
