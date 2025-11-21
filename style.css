@@ -19,7 +19,7 @@ body {
 /* Estilo para o fundo da seção "Início" */
 .hero-bg {
     /* Aplica um gradiente preto semi-transparente sobre a imagem 'fundo.jpg' */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fundo.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fundo.jpg');
     /* Garante que a imagem cubra toda a área */
     background-size: cover;
     /* Centraliza a imagem de fundo */
